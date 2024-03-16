@@ -47,7 +47,7 @@ export function CarouselItems() {
                       {fight.title}
                     </span>
                     <Button>
-                      <Link href="#">Explore Fight</Link>
+                      <Link href={"/matches/" + fight.id}>Explore Fight</Link>
                     </Button>
                   </div>
                 </CardContent>
