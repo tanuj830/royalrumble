@@ -6,7 +6,7 @@ import Link from "next/link";
 const Matches = () => {
   return (
     <div className="px-5 pt-5 pb-10">
-      <div>
+      <div className="grid grid-cols-1 gap-4">
         {fights.map((fight, index) => (
           <Card className=" border-muted shadow-xs shadow-primary border ">
             <CardContent className=" aspect-square p-6">
