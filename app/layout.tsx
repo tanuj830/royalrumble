@@ -32,8 +32,8 @@ export default function RootLayout({
         </div>
         <div className="hidden md:flex justify-center items-center h-screen w-screen overflow-hidden">
           <h1 className="text-muted-foreground text-xs">
-            Currently this web app supports mobile view, you can witch to mobile
-            view to access this application
+            Currently this web app supports mobile view, you can switch to
+            mobile view to access this application
           </h1>
         </div>
       </body>
