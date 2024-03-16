@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 const Matches = () => {
   return (
-    <div>
+    <div className="px-5 pt-5 pb-10">
       <div>
         {fights.map((fight, index) => (
           <Card className=" border-muted shadow-xs shadow-primary border ">
