@@ -1,38 +1,36 @@
 "use client";
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import React from "react";
+import GoogleMapReact from "google-map-react";
+// import { Icon } from '@iconify/react'
+// import locationIcon from '@iconify/icons-mdi/map-marker'
 
-const GetLiveLocation = () => {
-  const [location, setLocation] = useState("none");
+// import "./map.css";
 
-  const handleLocation = () => {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        showPosition,
-        failedToGetPosition
-      );
-    } else {
-      setLocation("Geolocation is not supported by this browser.");
-    }
-  };
+const LocationPin = ({ text }: any) => (
+  <div className="pin">
+    {/* <Icon icon={locationIcon} className="pin-icon" /> */}
+    <p className="pin-text">{text}</p>
+  </div>
+);
 
-  function showPosition(position: any) {
-    setLocation(
-      "Latitude: " +
-        position.coords.latitude +
-        "<br>Longitude: " +
-        position.coords.longitude
-    );
-  }
-  function failedToGetPosition(position: any) {
-    setLocation("Failed to get live location ");
-  }
-  return (
-    <div>
-      <h1>Current location : {location}</h1>
-      <button onClick={handleLocation}>get location</button>
+const Map = ({ location, zoomLevel }: any) => (
+  <div className="map">
+    <h2 className="map-h2">Come Visit Us At Our Campus</h2>
+
+    <div className="google-map">
+      <GoogleMapReact
+        bootstrapURLKeys={{ key: "" }}
+        defaultCenter={location}
+        defaultZoom={zoomLevel}
+      >
+        <LocationPin
+          lat={location.lat}
+          lng={location.lng}
+          text={location.address}
+        />
+      </GoogleMapReact>
     </div>
-  );
-};
+  </div>
+);
 
-export default GetLiveLocation;
+export default Map;
