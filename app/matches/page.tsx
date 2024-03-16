@@ -8,7 +8,10 @@ const Matches = () => {
     <div className="px-5 pt-5 pb-10">
       <div className="grid grid-cols-1 gap-4">
         {fights.map((fight, index) => (
-          <Card className=" border-muted shadow-xs shadow-primary border ">
+          <Card
+            className=" border-muted shadow-xs shadow-primary border "
+            key={fight.id}
+          >
             <CardContent className=" aspect-square p-6">
               <div className="relative">
                 <img
