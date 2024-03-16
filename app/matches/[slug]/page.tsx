@@ -1,7 +1,10 @@
+"use client";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const Match = () => {
-  return <div>Match: Exploring particular fight</div>;
+  const pathname = usePathname();
+  return <div>Match: Exploring particular fight with id= {pathname}</div>;
 };
 
 export default Match;

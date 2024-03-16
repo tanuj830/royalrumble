@@ -28,7 +28,7 @@ const Matches = () => {
               <div className=" mt-3 flex flex-col gap-2 ">
                 <span className="text-md font-semibold ">{fight.title}</span>
                 <Button>
-                  <Link href="#">Explore Fight</Link>
+                  <Link href={"/matches/" + fight.id}>Explore Fight</Link>
                 </Button>
               </div>
             </CardContent>
