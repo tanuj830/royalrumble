@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-screen overflow-hidden">
+        <div className="w-screen overflow-hidden block md:hidden relative">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -29,6 +29,12 @@ export default function RootLayout({
             <Navbar />
             {children}
           </ThemeProvider>
+        </div>
+        <div className="hidden md:flex justify-center items-center h-screen w-screen overflow-hidden">
+          <h1 className="text-muted-foreground text-xs">
+            Currently this web app supports mobile view, you can witch to mobile
+            view to access this application
+          </h1>
         </div>
       </body>
     </html>
