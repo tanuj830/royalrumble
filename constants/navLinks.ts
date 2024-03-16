@@ -12,9 +12,9 @@ import {
       link: "/",
     },
     {
-      title: "Fights",
+      title: "Matches",
       icon: HobbyKnifeIcon,
-      link: "/fights",
+      link: "/matches",
     },
     {
       title: "Notifications",

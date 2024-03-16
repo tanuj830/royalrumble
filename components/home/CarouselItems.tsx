@@ -34,17 +34,24 @@ export function CarouselItems() {
       onMouseEnter={plugin.current.stop}
       onMouseLeave={plugin.current.reset}
     >
-      <CarouselContent className="">
+      <CarouselContent className="  ">
         {fights.map((fight, index) => (
           <CarouselItem key={index} className=" ">
             <div className="p-1">
-              <Card className=" border-muted shadow-xs shadow-primary border bg-secondary">
+              <Card className=" border-muted shadow-xs shadow-primary border ">
                 <CardContent className=" aspect-square p-6">
-                  <img
-                    src={fight.img}
-                    className="w-full h-[50vw] object-cover object-top rounded-lg overflow-hidden"
-                    alt=""
-                  />
+                  <div className="relative">
+                    <img
+                      src="/live.svg"
+                      className="absolute w-10 h-10 top-0 left-2"
+                      alt=""
+                    />
+                    <img
+                      src={fight.img}
+                      className="w-full h-[50vw] object-cover object-top rounded-lg overflow-hidden"
+                      alt=""
+                    />
+                  </div>
                   <div className=" mt-3 flex flex-col gap-2 ">
                     <span className="text-md font-semibold ">
                       {fight.title}
