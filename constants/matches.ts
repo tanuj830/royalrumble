@@ -30,7 +30,7 @@ export const fights = [
       teamA:[
         {       player:
                {
-                   name:"Manny Pacquio",
+                   name:"Manny Pacquioa",
    
                },
        }],
